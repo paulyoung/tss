@@ -3,8 +3,8 @@
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration"
-import type { Margin, Padding } from "./src/Properties"
+import Declaration from "./src/Declaration";
+import type { Margin, Padding } from "./src/Properties";
 
 function m0(): { margin: Declaration<Margin> } {
   return {
@@ -19,8 +19,8 @@ var styles: { margin: Declaration<Padding> } = m0();
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration"
-import type { MarginTop, MarginRight, MarginLeft } from "./src/Properties"
+import Declaration from "./src/Declaration";
+import type { MarginTop, MarginRight, MarginLeft } from "./src/Properties";
 
 function mxn1(): {
   marginLeft: Declaration<MarginLeft>,
@@ -42,8 +42,8 @@ var styles: {
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration"
-import type { ListStyle, PaddingLeft, TextAlign } from "./src/Properties"
+import Declaration from "./src/Declaration";
+import type { ListStyle, PaddingLeft, TextAlign } from "./src/Properties";
 
 function center(): { textAlign: Declaration<TextAlign> } {
   return {
@@ -61,7 +61,7 @@ function listReset(): {
   };
 }
 
-var reset = listReset()
+var reset = listReset();
 
 var menuStyles: {
   listStyle: Declaration<ListStyle>,
@@ -71,5 +71,5 @@ var menuStyles: {
   listStyle: reset.listStyle,
   paddingLeft: reset.paddingLeft,
   textAlign: center().textAlign
-}
+};
 ```
