@@ -10,4 +10,4 @@ class Declaration<Type: Property> {
   }
 }
 
-export default Declaration
+export default Declaration;
