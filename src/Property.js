@@ -178,7 +178,9 @@ import type {
   WordBreak,
   WordSpacing,
   WordWrap,
-  ZIndex
+  ZIndex,
+
+  WebkitAppearance
 } from "./Properties";
 
 export type Property =
@@ -358,4 +360,6 @@ export type Property =
   WordBreak |
   WordSpacing |
   WordWrap |
-  ZIndex;
+  ZIndex |
+
+  WebkitAppearance;

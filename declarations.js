@@ -356,7 +356,9 @@ declare module "type-safe-styles" {
     WordBreak |
     WordSpacing |
     WordWrap |
-    ZIndex;
+    ZIndex |
+
+    WebkitAppearance;
 
   declare class Declaration<Type: Property> {
     value: any;

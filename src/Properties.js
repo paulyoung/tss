@@ -178,3 +178,5 @@ export class WordBreak {}
 export class WordSpacing {}
 export class WordWrap {}
 export class ZIndex {}
+
+export class WebkitAppearance {}
