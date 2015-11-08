@@ -12,8 +12,9 @@ function m0(): { margin: Declaration<Margin> } {
   };
 }
 
+// Error: property `padding` not found in object type
 // Error: `Margin` This type is incompatible with `Padding`
-var styles: { margin: Declaration<Padding> } = m0();
+var styles: { padding: Declaration<Padding> } = m0();
 ```
 
 ```javascript
