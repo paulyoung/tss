@@ -39,7 +39,7 @@ function center(): Declaration<TextAlign> {
 }
 
 function listReset(): [Declaration<ListStyle>, Declaration<PaddingLeft>] {
-  return [new Declaration("none"), new Declaration(0)]
+  return [new Declaration("none"), new Declaration(0)];
 }
 
 var reset = listReset()
