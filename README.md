@@ -6,11 +6,11 @@
 import Declaration from "./src/Declaration";
 import type { Margin, Padding } from "./src/Properties";
 
-function m0(): { margin: Declaration<Margin> } {
-  return {
-    margin: new Declaration(0)
-  };
-}
+const m0: () => {
+  margin: Declaration<Margin>
+} = () => ({
+  margin: new Declaration(0)
+});
 
 // Error: property `padding` not found in object type
 // Error: `Margin` This type is incompatible with `Padding`
@@ -23,15 +23,13 @@ const styles: { padding: Declaration<Padding> } = m0();
 import Declaration from "./src/Declaration";
 import type { MarginTop, MarginRight, MarginLeft } from "./src/Properties";
 
-function mxn1(): {
+const mxn1: () => {
   marginLeft: Declaration<MarginLeft>,
   marginRight: Declaration<MarginRight>
-} {
-  return {
-    marginLeft: new Declaration(.5),
-    marginRight: new Declaration(.5)
-  };
-}
+} = () => ({
+  marginLeft: new Declaration(.5),
+  marginRight: new Declaration(.5)
+});
 
 // Error: `MarginTop` This type is incompatible with `MarginLeft`
 const styles: {
@@ -46,21 +44,19 @@ const styles: {
 import Declaration from "./src/Declaration";
 import type { ListStyle, PaddingLeft, TextAlign } from "./src/Properties";
 
-function center(): { textAlign: Declaration<TextAlign> } {
-  return {
-    textAlign: new Declaration("center")
-  };
-}
+const center: () => {
+  textAlign: Declaration<TextAlign>
+} = () => ({
+  textAlign: new Declaration("center")
+});
 
-function listReset(): {
+const listReset: () => {
   listStyle: Declaration<ListStyle>,
   paddingLeft: Declaration<PaddingLeft>
-} {
-  return {
-    listStyle: new Declaration("none"),
-    paddingLeft: new Declaration(0)
-  };
-}
+} = () => ({
+  listStyle: new Declaration("none"),
+  paddingLeft: new Declaration(0)
+});
 
 const menuStyles: {
   listStyle: Declaration<ListStyle>,
