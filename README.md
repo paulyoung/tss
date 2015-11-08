@@ -3,7 +3,7 @@
 ```javascript
 // @flow
 
-import { Declaration, Margin, Padding } from "type-safe-styles";
+import { Declaration, Margin, Padding } from "tss";
 
 const m0: () => {
   margin: Declaration<Margin>
@@ -24,7 +24,7 @@ import {
   MarginTop,
   MarginRight,
   MarginLeft
-} from "type-safe-styles";
+} from "tss";
 
 const mxn1: () => {
   marginLeft: Declaration<MarginLeft>,
@@ -49,7 +49,7 @@ import {
   ListStyle,
   PaddingLeft,
   TextAlign
-} from "type-safe-styles";
+} from "tss";
 
 const center: () => {
   textAlign: Declaration<TextAlign>

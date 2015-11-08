@@ -1,4 +1,4 @@
-declare module "type-safe-styles" {
+declare module "tss" {
   declare class AlignContent {}
   declare class AlignItems {}
   declare class AlignSelf {}
