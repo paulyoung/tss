@@ -3,8 +3,6 @@
 ```javascript
 // @flow
 
-// @flow
-
 import Declaration from "./src/Declaration"
 import type { Margin, Padding } from "./src/Properties"
 
@@ -19,8 +17,6 @@ var styles: { margin: Declaration<Padding> } = m0();
 ```
 
 ```javascript
-// @flow
-
 // @flow
 
 import Declaration from "./src/Declaration"
