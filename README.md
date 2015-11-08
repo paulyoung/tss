@@ -3,11 +3,7 @@
 ```javascript
 // @flow
 
-import {
-  Declaration,
-  Margin,
-  Padding
-} from "type-safe-styles";
+import { Declaration, Margin, Padding } from "type-safe-styles";
 
 const m0: () => {
   margin: Declaration<Margin>
