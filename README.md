@@ -27,3 +27,30 @@ function mxn1(): [Declaration<MarginLeft>, Declaration<MarginRight>] {
 // Error: `MarginTop` This type is incompatible with `MarginRight`
 var horizontalMargin: [Declaration<MarginLeft>, Declaration<MarginTop>] = mxn1();
 ```
+
+```javascript
+// @flow
+
+import Declaration from "./src/Declaration";
+import type { ListStyle, PaddingLeft, TextAlign } from "./src/Properties";
+
+function center(): Declaration<TextAlign> {
+  return new Declaration("center");
+}
+
+function listReset(): [Declaration<ListStyle>, Declaration<PaddingLeft>] {
+  return [new Declaration("none"), new Declaration(0)]
+}
+
+var reset = listReset()
+
+var menuStyles: {
+  listStyle: Declaration<ListStyle>,
+  paddingLeft: Declaration<PaddingLeft>,
+  textAlign: Declaration<TextAlign>
+} = {
+  listStyle: reset[0],
+  paddingLeft: reset[1],
+  textAlign: center()
+};
+```
