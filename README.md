@@ -29,8 +29,6 @@ function mxn1(): { marginLeft: Declaration<MarginLeft>, marginRight: Declaration
   };
 }
 
-var margins = mxn1()
-
 // Error: `MarginTop` This type is incompatible with `MarginLeft`
 var styles: { marginLeft: Declaration<MarginTop>, marginRight: Declaration<MarginRight> } = mxn1();
 ```
