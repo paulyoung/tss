@@ -22,7 +22,10 @@ var styles: { margin: Declaration<Padding> } = m0();
 import Declaration from "./src/Declaration"
 import type { MarginTop, MarginRight, MarginLeft } from "./src/Properties"
 
-function mxn1(): { marginLeft: Declaration<MarginLeft>, marginRight: Declaration<MarginRight> } {
+function mxn1(): {
+  marginLeft: Declaration<MarginLeft>,
+  marginRight: Declaration<MarginRight>
+} {
   return {
     marginLeft: new Declaration(.5),
     marginRight: new Declaration(.5)
@@ -30,7 +33,10 @@ function mxn1(): { marginLeft: Declaration<MarginLeft>, marginRight: Declaration
 }
 
 // Error: `MarginTop` This type is incompatible with `MarginLeft`
-var styles: { marginLeft: Declaration<MarginTop>, marginRight: Declaration<MarginRight> } = mxn1();
+var styles: {
+  marginLeft: Declaration<MarginTop>,
+  marginRight: Declaration<MarginRight>
+} = mxn1();
 ```
 
 ```javascript
@@ -45,7 +51,10 @@ function center(): { textAlign: Declaration<TextAlign> } {
   };
 }
 
-function listReset(): { listStyle: Declaration<ListStyle>, paddingLeft: Declaration<PaddingLeft> } {
+function listReset(): {
+  listStyle: Declaration<ListStyle>,
+  paddingLeft: Declaration<PaddingLeft>
+} {
   return {
     listStyle: new Declaration("none"),
     paddingLeft: new Declaration(0)
