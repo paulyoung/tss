@@ -14,7 +14,7 @@ function m0(): { margin: Declaration<Margin> } {
 
 // Error: property `padding` not found in object type
 // Error: `Margin` This type is incompatible with `Padding`
-var styles: { padding: Declaration<Padding> } = m0();
+const styles: { padding: Declaration<Padding> } = m0();
 ```
 
 ```javascript
@@ -34,7 +34,7 @@ function mxn1(): {
 }
 
 // Error: `MarginTop` This type is incompatible with `MarginLeft`
-var styles: {
+const styles: {
   marginLeft: Declaration<MarginTop>,
   marginRight: Declaration<MarginRight>
 } = mxn1();
@@ -62,7 +62,7 @@ function listReset(): {
   };
 }
 
-var menuStyles: {
+const menuStyles: {
   listStyle: Declaration<ListStyle>,
   paddingLeft: Declaration<PaddingLeft>,
   textAlign: Declaration<TextAlign>
