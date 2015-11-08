@@ -3,8 +3,7 @@
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration";
-import type { Margin, Padding } from "./src/Properties";
+import { Declaration, Margin, Padding } from "type-safe-styles";
 
 const m0: () => {
   margin: Declaration<Margin>
@@ -20,8 +19,7 @@ const styles: { padding: Declaration<Padding> } = m0();
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration";
-import type { MarginTop, MarginRight, MarginLeft } from "./src/Properties";
+import { Declaration, MarginTop, MarginRight, MarginLeft } from "type-safe-styles";
 
 const mxn1: () => {
   marginLeft: Declaration<MarginLeft>,
@@ -41,8 +39,7 @@ const styles: {
 ```javascript
 // @flow
 
-import Declaration from "./src/Declaration";
-import type { ListStyle, PaddingLeft, TextAlign } from "./src/Properties";
+import { Declaration, ListStyle, PaddingLeft, TextAlign } from "type-safe-styles";
 
 const center: () => {
   textAlign: Declaration<TextAlign>
