@@ -62,8 +62,6 @@ function listReset(): {
   };
 }
 
-var reset = listReset();
-
 var menuStyles: {
   listStyle: Declaration<ListStyle>,
   paddingLeft: Declaration<PaddingLeft>,
