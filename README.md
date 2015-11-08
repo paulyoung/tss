@@ -69,8 +69,7 @@ var menuStyles: {
   paddingLeft: Declaration<PaddingLeft>,
   textAlign: Declaration<TextAlign>
 } = {
-  listStyle: reset.listStyle,
-  paddingLeft: reset.paddingLeft,
-  textAlign: center().textAlign
+  ...listReset(),
+  ...center()
 };
 ```
