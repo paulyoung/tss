@@ -187,3 +187,8 @@ export type WordWrap = Properties.WordWrap;
 export type ZIndex = Properties.ZIndex;
 
 export type WebkitAppearance = Properties.WebkitAppearance;
+
+
+// export transform from "./transform";
+import { transform as _transform } from "./transform";
+export const transform = _transform;
