@@ -3,11 +3,9 @@
 
 import type { Property } from "./Property";
 
-class Declaration<Type: Property> {
+export class Declaration<Type: Property> {
   value: any;
   constructor(value: any) {
     this.value = value;
   }
 }
-
-export default Declaration;
