@@ -1,4 +1,5 @@
-# Type-Safe Styles [![Build Status](https://travis-ci.org/paulyoung/tss.svg?branch=master)](https://travis-ci.org/paulyoung/tss)
+# Type-Safe Styles
+[![Travis branch](https://img.shields.io/travis/paulyoung/tss.svg?style=flat-square)](https://travis-ci.org/paulyoung/tss) [![npm](https://img.shields.io/npm/v/@paulyoung/tss.svg?style=flat-square)](https://www.npmjs.com/package/@paulyoung/tss)
 
 
 ## Installation
