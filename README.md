@@ -1,4 +1,4 @@
-# Type-Safe Styles
+# Type-Safe Styles [![Build Status](https://travis-ci.org/paulyoung/tss.svg?branch=master)](https://travis-ci.org/paulyoung/tss)
 
 ```javascript
 // @flow
