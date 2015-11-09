@@ -25,6 +25,7 @@
     "babel-preset-stage-0": "^6.1.2"
   },
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
   }
 }
