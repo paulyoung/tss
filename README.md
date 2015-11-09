@@ -1,9 +1,55 @@
 # Type-Safe Styles [![Build Status](https://travis-ci.org/paulyoung/tss.svg?branch=master)](https://travis-ci.org/paulyoung/tss)
 
+
+## Installation
+```
+npm install --save @paulyoung/tss
+```
+
+## Usage
+Add the following entries to your `.flowconfig`:
+```
+[ignore]
+.*/node_modules/.*
+
+[options]
+module.name_mapper='@paulyoung/tss' -> '@paulyoung/tss/src'
+```
+
+Write type-safe styles:
 ```javascript
 // @flow
 
-import { Declaration, Margin, Padding } from "tss";
+import {
+  transform,
+  Declaration,
+  Margin
+} from "@paulyoung/tss";
+
+const m0: () => {
+  margin: Declaration<Margin>
+} = () => ({
+  margin: new Declaration(0)
+});
+
+const typeSafeStyles: {
+  margin: Declaration<Margin>
+} = m0();
+
+const inlineStyles: {
+  [key: string]: any
+} = transform(typeSafeStyles)
+
+console.log(inlineStyles); // { margin: 0 }
+```
+
+
+### Safety against incorrect property names
+
+```javascript
+// @flow
+
+import { Declaration, Margin, Padding } from "@paulyoung/tss";
 
 const m0: () => {
   margin: Declaration<Margin>
@@ -12,9 +58,11 @@ const m0: () => {
 });
 
 // Error: property `padding` not found in object type
-// Error: `Margin` This type is incompatible with `Padding`
-const styles: { padding: Declaration<Padding> } = m0();
+const margin: { padding: Declaration<Margin> } = m0();
 ```
+
+
+### Safety against incorrect property types
 
 ```javascript
 // @flow
@@ -24,7 +72,7 @@ import {
   MarginTop,
   MarginRight,
   MarginLeft
-} from "tss";
+} from "@paulyoung/tss";
 
 const mxn1: () => {
   marginLeft: Declaration<MarginLeft>,
@@ -35,11 +83,14 @@ const mxn1: () => {
 });
 
 // Error: `MarginTop` This type is incompatible with `MarginLeft`
-const styles: {
+const horizontalMargin: {
   marginLeft: Declaration<MarginTop>,
   marginRight: Declaration<MarginRight>
 } = mxn1();
 ```
+
+
+### Merging styles
 
 ```javascript
 // @flow
@@ -49,7 +100,7 @@ import {
   ListStyle,
   PaddingLeft,
   TextAlign
-} from "tss";
+} from "@paulyoung/tss";
 
 const center: () => {
   textAlign: Declaration<TextAlign>
